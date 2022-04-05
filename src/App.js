@@ -1,6 +1,7 @@
 import { useState } from "react";
 import NewTaskFrom from "./components/NewTaskFrom";
 import TaskList from "./components/TaskList";
+import './app.css'
 
 function App() {
   const [activeTasks, setActiveTasks] = useState([{title:'Go to cemetery', date:'6.4. 2022', status:false, id:1}])
