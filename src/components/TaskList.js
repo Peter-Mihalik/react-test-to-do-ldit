@@ -1,12 +1,15 @@
 import './styles/taskList.css'
 import Task from './Task'
 
-export default function TaskList({tasks}) {
+export default function TaskList({tasks, children}) {
   return (
     <div className='taskList'>
-        {tasks.map((task, index) => (
-            <Task key={index} task={task}></Task>
-        ))}
+        {children}
+        <div className="tasks">
+            {tasks.map((task, index) => (
+                <Task key={index} task={task}></Task>
+            ))}
+        </div>
     </div>
   )
 }

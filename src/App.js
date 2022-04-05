@@ -16,8 +16,13 @@ function App() {
     <div className="App">
       <NewTaskFrom addTask={addTask}></NewTaskFrom>
       <div className="taskContainers">
+
         <TaskList tasks={activeTasks}>
           <h2>Active Tasks</h2>
+        </TaskList>
+
+        <TaskList tasks={completedTasks}>
+          <h2>Completed Tasks</h2>
         </TaskList>
       </div>
     </div>
