@@ -1,6 +1,6 @@
 import './styles/task.css'
 
-export default function Task({task, toggleStatus}) {
+export default function Task({task, toggleStatus, deleteTask}) {
   return (
     <div className="task">
         <div className="info">
@@ -11,7 +11,7 @@ export default function Task({task, toggleStatus}) {
         <div className="btns">
             <div className="checkBox" onClick={() => toggleStatus(task.id)}></div>
             {task.status && (
-                <div className="deleteBtn">Delete</div>
+                <div className="deleteBtn" onClick={() => deleteTask(task.id)}>Delete</div>
             )}
         </div>
     </div>
