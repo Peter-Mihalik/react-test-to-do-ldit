@@ -1,0 +1,25 @@
+.task {
+    display: flex;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: rgb(222, 222, 222);
+}
+.task p {
+    font-size: 15px;
+    color: rgb(83, 83, 83);
+}
+.checkBox{
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    background: rgb(220, 220, 220);
+    margin: 15px;
+    cursor: pointer;
+}
+.checkBox:hover {
+    background: rgb(191, 191, 191);
+}
