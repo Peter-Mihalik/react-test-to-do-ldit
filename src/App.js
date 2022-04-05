@@ -4,6 +4,9 @@ function App() {
   return (
     <div className="App">
       <NewTaskFrom></NewTaskFrom>
+      <div className="taskContainers">
+        
+      </div>
     </div>
   );
 }
