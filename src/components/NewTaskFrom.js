@@ -9,7 +9,7 @@ export default function NewTaskFrom({addTask}) {
     const handleSubmit = (e) => {
       e.preventDefault()
       const taskObject = {
-        task: task,
+        title: task,
         date: date,
         status: false,
         id: Math.floor(Math.random() * 10000)
