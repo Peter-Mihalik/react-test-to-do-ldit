@@ -1,7 +1,7 @@
 import { useState } from "react"
 import './styles/newTaskForm.css'
 
-export default function NewTaskFrom() {
+export default function NewTaskFrom({addTask}) {
 
     const [task, setTask] = useState('')
     const [date, setDate] = useState('')
@@ -11,9 +11,10 @@ export default function NewTaskFrom() {
       const taskObject = {
         task: task,
         date: date,
+        status: false,
         id: Math.floor(Math.random() * 10000)
       }
-      console.log(taskObject)
+      addTask(taskObject)
     }
 
   return (
