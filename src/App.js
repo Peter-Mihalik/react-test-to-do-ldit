@@ -1,9 +1,9 @@
 import { useState } from "react";
 import NewTaskFrom from "./components/NewTaskFrom";
-import Task from "./components/Task";
+import TaskList from "./components/TaskList";
 
 function App() {
-  const [activeTasks, setActiveTasks] = useState([])
+  const [activeTasks, setActiveTasks] = useState([{title:'Go to cemetery', date:'6.4. 2022', status:false, id:1}])
   const [completedTasks, setCompletedTasks] = useState([])
 
   function addTask(task) {
@@ -16,7 +16,9 @@ function App() {
     <div className="App">
       <NewTaskFrom addTask={addTask}></NewTaskFrom>
       <div className="taskContainers">
-        <Task task={{title:'Go to cemetery', date:'6.4. 2022', status:false, id:1}}></Task>
+        <TaskList tasks={activeTasks}>
+          <h2>Active Tasks</h2>
+        </TaskList>
       </div>
     </div>
   );
