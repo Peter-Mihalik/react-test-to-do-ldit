@@ -12,6 +12,12 @@
     font-size: 15px;
     color: rgb(83, 83, 83);
 }
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .checkBox{
     width: 20px;
     height: 20px;
@@ -21,5 +27,22 @@
     cursor: pointer;
 }
 .checkBox:hover {
+    background: rgb(191, 191, 191);
+}
+.checked{
+    background: rgb(191, 191, 191);
+}
+.checked:hover{
+    background: rgb(220, 220, 220);;
+}
+.deleteBtn{
+    background-color: none;
+    padding: 5px;
+    font-size: 13px;
+    border: black 1px solid;
+    cursor: pointer;
+}
+
+.deleteBtn:hover {
     background: rgb(191, 191, 191);
 }
