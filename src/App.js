@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NewTaskFrom from "./components/NewTaskFrom";
 import TaskList from "./components/TaskList";
 import './app.css'
@@ -8,7 +8,11 @@ function App() {
   const [tasks, setTasks] = useState([])
   const [url, setUrl] = useState('http://localhost:3000/tasks')
 
-  useFetch(url)
+  const {data, isPending } = useFetch(url)
+
+  useEffect(() => {
+    console.log(data)
+  })
 
   function addTask(task) {
     setTasks((prevTasks) => {
@@ -40,10 +44,12 @@ function App() {
       <div className="taskContainers">
 
         <TaskList tasks={tasks} state={false} toggleStatus={toggleStatus} deleteTask={deleteTask}>
+          {isPending && (<div>Loading Tasks...</div>)}
           <h2>Active Tasks</h2>
         </TaskList>
 
         <TaskList tasks={tasks} state={true} toggleStatus={toggleStatus} deleteTask={deleteTask}>
+          {isPending && (<div>Loading Tasks...</div>)}
           <h2>Completed Tasks</h2>
         </TaskList>
       </div>
