@@ -2,9 +2,13 @@ import { useState } from "react";
 import NewTaskFrom from "./components/NewTaskFrom";
 import TaskList from "./components/TaskList";
 import './app.css'
+import { useFetch } from "./components/hooks/useFetch";
 
 function App() {
   const [tasks, setTasks] = useState([])
+  const [url, setUrl] = useState('http://localhost:3000/tasks')
+
+  useFetch(url)
 
   function addTask(task) {
     setTasks((prevTasks) => {
