@@ -10,10 +10,6 @@ function App() {
 
   const {data, isPending } = useFetch(url)
 
-  useEffect(() => {
-    console.log(data)
-  })
-
   function addTask(task) {
     setTasks((prevTasks) => {
       setTasks([...prevTasks, task])
